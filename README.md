@@ -31,7 +31,7 @@ This system implements an end-to-end monocular depth-mapping pipeline using a U-
 3) Multiple such "videos" are recorded, with the frame-rate slowed to allow for greater variation between images. Images are automatically downsized to 128x196, downsampled to 8 bit, and adjusted to grayscale within the application to align with the depth-map. 
 
 4) Data is transferred to the GPU-equipped desktop/laptop platform for model training.
-
+<img src="images/IMG_7017.PNG"
 *Figure 1 - Depth App - Data Collection Process*
 
 **NOTES:**
