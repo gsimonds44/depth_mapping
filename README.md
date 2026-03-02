@@ -32,7 +32,7 @@ This system implements an end-to-end monocular depth-mapping pipeline using a U-
 
 4) Data is transferred to the GPU-equipped desktop/laptop platform for model training.
 
-<img src="images/IMG_7017.PNG" width="200">
+<img src="images/IMG_7017.PNG" width="200"/>
 *Figure 1 - Depth App - Data Collection Process*
 
 **NOTES:**
