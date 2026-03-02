@@ -32,7 +32,7 @@ This system implements an end-to-end monocular depth-mapping pipeline using a U-
 
 4) Data is transferred to the GPU-equipped desktop/laptop platform for model training.
 
-<img src="images/IMG_7017.PNG" width="400">
+<img src="images/IMG_7017.PNG" width="200">
 *Figure 1 - Depth App - Data Collection Process*
 
 **NOTES:**
@@ -70,6 +70,7 @@ This system implements an end-to-end monocular depth-mapping pipeline using a U-
 
 2) The coreML model is exported to the iOS mobile device application to run real-time inference on live video data at 60 fps. Results are shown below.
 
+<img src="images/IMG_7015.PNG" width="200">
 *Figure 2 - Depth App - Inference Mode*
 
 
@@ -79,5 +80,9 @@ This system implements an end-to-end monocular depth-mapping pipeline using a U-
 
 2) Running inference on the app using live camera data delivers visually less impressive results when compared to the validation set. This is likely due to the fact that the validation set includes images highly similar to the training set. Further expansion of the training data would likely greatly improve global performance.
 
+<img src="images/Performance.png" width="400">
 *Figure 3 - Accuracy Visualization from Validation Set*<br>
+<img src="images/Figure_1.PNG" width="400">
+<img src="images/Figure_2.PNG" width="400">
+<img src="images/Figure_3.PNG" width="400">
 *Figure 4 - Pixel-Wise Accuracy Results*<br>
