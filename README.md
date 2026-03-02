@@ -28,10 +28,11 @@ This system implements an end-to-end monocular depth-mapping pipeline using a U-
 
 2) When the "stop recording" button is pressed, collected data is saved locally to the device as csv/png pairs, grouped into a new folder for each capture session.
 
-3) Multiple such "videos" are recorded, with the frame-rate slowed to allow for greater variation between images. Images are automatically downsized to 128x196, downsampled to 8 bit, and adjusted to grayscale within the application to align with the depth-map. 
+3) Multiple such "videos" are recorded, with the frame-rate slowed to allow for greater variation between images. Images are automatically downsized to 128x196, downsampled to 8-bit, and adjusted to grayscale within the application to align with the depth-map. 
 
 4) Data is transferred to the GPU-equipped desktop/laptop platform for model training.
-<img src="images/IMG_7017.PNG"
+
+<img src="images/IMG_7017.PNG">
 *Figure 1 - Depth App - Data Collection Process*
 
 **NOTES:**
@@ -52,14 +53,14 @@ This system implements an end-to-end monocular depth-mapping pipeline using a U-
 
 2) The script "prepare.py" is run, which fetches the raw csv/png data from the "data" folder, converts it to numpy arrays and saves them as "dists.npy"/"image_data.npy" for use by the training script. All images/depthmaps are displayed in a GUI for inspection.
 
-3) The script "train.py" is run (importing from model.py), which fetches data from the numpy arrays. Validation data is randomly split off, excluded from the training set, and saved as a separate set of numpy arrays with "_validation" appended to the filename. The script randomly downsizes the image data from 80%-100% of it's original size, then restores it using cv2.INTER_AREA to original size, ensuring data variation. It trains the U-Net CNN, and saves the trained model to the same directory as both a .pth file and a coreML file, for inference locally or on Apple devices.
+3) The script "train.py" is run (importing from model.py), which fetches data from the numpy arrays. Validation data is randomly split off, excluded from the training set, and saved as a separate set of numpy arrays with "_validation" appended to the filename. The script randomly downsizes the image data from 80%-100% of its original size, then restores it using cv2.INTER_AREA to original size, ensuring data variation. It trains the U-Net CNN, and saves the trained model to the same directory as both a .pth file and a coreML file, for inference locally or on Apple devices.
 
 
 <br><br>
 
 **NOTES:**
 
--During training, it was observed that increasing model depth and "width" (increasing parameters) improves performance. The number of epochs also improved accuracy on the validation set with unexpected performance improvements, increasing slowly but linearly, beyond the exponential decay point. Such behavior is indicative of overfitting to the 50-100 3D scenarios the model was trained on. Adding additional training sets may improve global performance.
+-During training, it was observed that increasing model depth and "width" (increasing parameters) improves performance. The number of epochs also improved accuracy on the validation set with unexpected performance improvements, increasing slowly but linearly, beyond the exponential decay point. Such behavior is indicative of overfitting to the 50-100 3D scenarios on which the model was trained. Adding additional training sets may improve global performance.
 
 <br><br>
 
