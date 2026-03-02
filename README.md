@@ -82,7 +82,7 @@ This system implements an end-to-end monocular depth-mapping pipeline using a U-
 
 <img src="images/Performance.png" width="400">
 *Figure 3 - Accuracy Visualization from Validation Set*<br>
-<img src="images/Figure_1.PNG" width="400">
-<img src="images/Figure_2.PNG" width="400">
-<img src="images/Figure_3.PNG" width="400">
+<img src="images/Figure_1.png" width="400">
+<img src="images/Figure_2.png" width="400">
+<img src="images/Figure_3.png" width="400">
 *Figure 4 - Pixel-Wise Accuracy Results*<br>
