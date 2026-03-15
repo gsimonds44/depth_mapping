@@ -1,5 +1,4 @@
-# passive_wifi_positioning
-
+# depth_mapping
 ## Purpose:
 
 This system implements an end-to-end monocular depth-mapping pipeline using a U-Net-based convolutional neural network trained on ground-truth depth from a mobile Lidar sensor. Synchronized pairs of grayscale images and depth data were collected and used to supervise the training of a model that predicts per-pixel depth from a single grayscale frame with high accuracy on a validation set. The model was then exported to CoreML for high-efficiency real-time inference at 60fps on a mobile device using image data only, providing depth-sensing capabilities where Lidar sensors are unavailable. The fundamental goal is to make progress toward solving the "vision problem", matching human depth perception without requiring ToF-based sensor augmentation, or stereoscopic vision.<br><br>
